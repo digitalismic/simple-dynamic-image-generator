@@ -34,7 +34,7 @@ Step 4 : Install dependencies `pip install pillow --user Admin`
 
 Step 5 : Go to script folder and create 1000 images `for i in {1..1000}; do python ./dynamic-image-generator.py $RANDOM; done`
 
-Step 6 : Go to sync images to your AWS S3 Bucket `aws s3 sync ./images/ s3://DESTINATION-BUCKET`
+Step 6 : S3 sync your images to your destination Bucket `aws s3 sync ./images/ s3://DESTINATION-BUCKET`
 
 Done
 
