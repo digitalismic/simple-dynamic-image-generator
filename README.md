@@ -39,4 +39,4 @@ Step 6 : S3 sync your images to your destination Bucket `aws s3 sync ./images/ s
 Done
 
 
-> ![result-100](https://github.com/digitalismic/simple-dynamic-image-generator/blob/main/images/result-random-image-generator-100.png)
+> ![result-100](https://github.com/digitalismic/simple-dynamic-image-generator/blob/main/images/random-image-generator-100.png)
