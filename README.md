@@ -22,19 +22,23 @@ Result :
 
 ## Practical Use Case ; Example
 
-**Scenario** : You need to create *1000 images* with *random number* and upload it into an *Amazon S3 Bucket* for a development requirement 
+**Scenario** : You need to create *1000 images* with *random number* and upload it into an *Amazon S3 Bucket* for a development requirement. In this scenario, we're going to use AWS Cloud9.
 
-Step 1 : Login into your AWS account, search for service 'AWS Cloud9'
+[AWS Cloud9](https://aws.amazon.com/cloud9/) is a cloud-based integrated development environment (IDE) that lets you write, run, and debug your code with just a browser. It also provide AWS S3 integration using AWS managed temporary credentials, so you will have access to your bucket without need to provide a static access & secret key. 
 
-Step 2 : Create AWS Cloud9 Environment
+Enable auto shutdown when there is no activity on your AWS Cloud9 instance to save money. If your running t3.small (2vCPU and 2GiB RAM) for 4 hours per day, you will spent 13.32 USD Monthly. Detail calculation [here](https://calculator.aws/#/estimate?id=be76a61e45e9d7199c0fce6da17f3d321a98256b)
 
-Step 3 : Clone script from Github `git clone https://github.com/digitalismic/simple-dynamic-image-generator`
+- Step 1 : Login into your AWS account, search for service 'AWS Cloud9'
 
-Step 4 : Install dependencies `pip install pillow --user Admin`
+- Step 2 : Create AWS Cloud9 Environment
 
-Step 5 : Go to script folder and create 1000 images `for i in {1..1000}; do python ./dynamic-image-generator.py $RANDOM; done`, it took around 1~2 minutes using t3.small with total size of 4.0M
+- Step 3 : Clone script from Github `git clone https://github.com/digitalismic/simple-dynamic-image-generator`
 
-Step 6 : S3 sync your images to your destination Bucket `aws s3 sync ./images/ s3://DESTINATION-BUCKET`
+- Step 4 : Install dependencies `pip install pillow --user Admin`
+
+- Step 5 : Go to script folder and create 1000 images `for i in {1..1000}; do python ./dynamic-image-generator.py $RANDOM; done` *it took around 1~2 minutes using t3.small with total size of 4.0M*
+
+- Step 6 : S3 sync your images to your destination Bucket `aws s3 sync ./images/ s3://DESTINATION-BUCKET`
 
 Done
 
