@@ -22,7 +22,7 @@ Result :
 
 ## Practical Use Case ; Example
 
-**Scenario** : You need to create *1000 images* with *random number* and upload it into an *Amazon S3 Bucket* for a development requierement 
+**Scenario** : You need to create *1000 images* with *random number* and upload it into an *Amazon S3 Bucket* for a development requirement 
 
 Step 1 : Login into your AWS account, search for service 'AWS Cloud9'
 
